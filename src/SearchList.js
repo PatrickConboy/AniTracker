@@ -5,11 +5,12 @@
 */
 
 import React, { Component } from 'react'
+// import List from './DatabaseList'
 
 // This class will display the list of anime from the database.
 class SearchList extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
 
     this.state = {
       list: [
@@ -19,11 +20,32 @@ class SearchList extends Component {
       ]
     }
   }
+
   render() {
     return (
       <div className="searchList">
+        <section className="section">
+          <List items={this.state.list} />
+        </section>
+      </div>
+    )
+  }
+}
+
+class List extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      filtered: []
+    }
+  }
+
+  render() {
+    return (
+      <div>
         <ul>
-          {this.state.list.map(item => (
+          {this.props.items.map(item => (
             <li key={item}>{item}</li>
           ))}
         </ul>
