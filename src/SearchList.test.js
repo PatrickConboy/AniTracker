@@ -11,6 +11,17 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div)
 })
 
-it('list has correct number of anime in it', () => {
-  assert.equal(1, 1)
+it('My Test Case', () => {
+
+  // This eventually needs to be the actual list from a SearchList object.
+  var testList = {
+    list: [
+      "Tokyo Ghoul",
+      "Haikyuu",
+      "Naruto"
+    ]
+  }
+
+  var testLength = testList.length
+  expect(testLength).toEqual(3);
 })
