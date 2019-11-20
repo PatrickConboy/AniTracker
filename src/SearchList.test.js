@@ -4,6 +4,7 @@ import SearchList from './SearchList'
 import List from './SearchList'
 import { exportAllDeclaration } from '@babel/types'
 import { AssertionError } from 'assert'
+import { string } from 'postcss-selector-parser'
 
 it('renders without crashing', () => {
   const div = document.createElement('div')
@@ -14,14 +15,11 @@ it('renders without crashing', () => {
 it('My Test Case', () => {
 
   // This eventually needs to be the actual list from a SearchList object.
-  var testList = {
-    list: [
+  let testList = [
       "Tokyo Ghoul",
       "Haikyuu",
       "Naruto"
     ]
-  }
 
-  var testLength = testList.length
-  expect(testLength).toEqual(3);
+  expect(testList.length).toEqual(3);
 })
