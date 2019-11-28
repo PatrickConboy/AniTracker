@@ -5,7 +5,7 @@
 
 import React, { Component } from 'react'
 
-import SearchBar from "./SearchBar"
+// import SearchBar from "./SearchBar"
 import SearchList from "./SearchList"
 
 // This page is the entire page for searching the database for anime.
@@ -13,7 +13,7 @@ class SearchPage extends Component {
   render() {
     return (
       <div>
-        <SearchBar />
+        {/* <SearchBar /> */}
         <SearchList />
       </div>
     )
