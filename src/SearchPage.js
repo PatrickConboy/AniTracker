@@ -1,20 +1,26 @@
-/* Created By: Patrick Conboy
- * Created On: November 4, 2019
- * Description: This file is the main file for the search page of AniTracker.
-*/
-
 import React, { Component } from 'react'
+import FilteredSearchList from './FilteredSearchList'
 
-// import SearchBar from "./SearchBar"
-import SearchList from "./SearchList"
-
-// This page is the entire page for searching the database for anime.
 class SearchPage extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      list: [
+        "Tokyo Ghoul",
+        "Haikyuu",
+        "Naruto",
+        "My Hero Academia"
+      ]
+    }
+  }
+
   render() {
     return (
-      <div>
-        {/* <SearchBar /> */}
-        <SearchList />
+      <div className="searchList">
+        <section className="section">
+          <FilteredSearchList items={this.state.list} />
+        </section>
       </div>
     )
   }

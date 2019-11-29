@@ -7,3 +7,9 @@ it('renders without crashing', () => {
   ReactDOM.render(<SearchPage />, div)
   ReactDOM.unmountComponentAtNode(div)
 })
+
+it('My Test Case', () => {
+  let searchList = new SearchPage("props")
+  let animeList = searchList.state["list"]
+  expect(animeList.length).toEqual(4)
+})
