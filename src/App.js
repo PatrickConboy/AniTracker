@@ -1,5 +1,11 @@
+/* Author: Patrick Conboy
+ * Date Created: 11/1/2019
+ * Description: This file just pulls together the various main web page components
+ * of our project.
+ */
+
 import React, { Component } from 'react'
-import Main from './Main'
+import SearchPage from './SearchPage'
 import './App.css';
 
 class App extends Component {
@@ -12,7 +18,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Main/>
+        <SearchPage />
       </div>
     )
   }

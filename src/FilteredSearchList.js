@@ -1,3 +1,11 @@
+/* Author: Patrick Conboy
+ * Date Created: 11/4/2019
+ * Description: This file creates a separate list from our original database
+ * list of anime that we can filter without worrying about effecting the original.
+ * It essentially just filters the list displayed on the website based on whatever
+ * is typed in the input box.
+ */
+
 import React, { Component } from 'react'
 
 class FilteredSearchList extends Component {

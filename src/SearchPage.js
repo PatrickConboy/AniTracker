@@ -1,3 +1,9 @@
+/* Author: Patrick Conboy
+ * Date Created: 11/4/2019
+ * Description: This page allows the user to search our database list of anime.
+ * The FilterSearchList provides most of the actual functionality code.
+ */
+
 import React, { Component } from 'react'
 import FilteredSearchList from './FilteredSearchList'
 
