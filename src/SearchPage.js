@@ -5,6 +5,7 @@ class SearchPage extends Component {
   constructor(props) {
     super(props)
 
+    // TODO: this list should be populated by database from Firebase
     this.state = {
       list: [
         "Tokyo Ghoul",
