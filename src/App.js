@@ -1,14 +1,14 @@
 /* Author: Patrick Conboy
 
  * Date Created: 11/1/2019
- 
+
  * Description: This file just pulls together the various main web page components
  * of our project.
  */
 
 import React, { Component } from 'react'
 import SearchPage from './SearchPage'
-import './App.css';
+import './App.css'
 
 class App extends Component {
   // Constructor currently does nothing, but
