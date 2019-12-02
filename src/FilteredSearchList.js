@@ -28,6 +28,7 @@ class FilteredSearchList extends Component {
   }
 
   // Passes in list of anime everytime it renders again.
+  // NOTE: componentWillReceiveProps is an unsafe lifecycle in newest version of JS
   UNSAFE_componentWillReceiveProps(nextProps) {
     this.setState({
       filtered: nextProps.items
