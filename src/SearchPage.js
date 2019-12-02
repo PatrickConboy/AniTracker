@@ -13,15 +13,15 @@ class SearchPage extends Component {
     super(props)
 
     const db = firebase.firestore()
-    let animeList = db.collection("anime").get()
-    console.log(animeList)
-
+    let animeList = db.collection("anime").get().then((snapshot) => {
+      console.log(snapshot.docs)
+    })
 
     // TODO: this list should be populated by database from Firebase
     this.state = {
       list: [
-        "test",
-        "whoCares",
+        "one piece",
+        "bleach",
         "naruto",
         "haikyuu"
       ]
