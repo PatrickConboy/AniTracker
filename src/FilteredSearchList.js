@@ -28,7 +28,7 @@ class FilteredSearchList extends Component {
   }
 
   // Passes in list of anime everytime it renders again.
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     this.setState({
       filtered: nextProps.items
     })
