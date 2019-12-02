@@ -8,6 +8,7 @@
 
 import React, { Component } from 'react'
 import FilteredSearchList from './FilteredSearchList'
+import firebase from './components/Firebase/firebase'
 
 class SearchPage extends Component {
   constructor(props) {
@@ -16,10 +17,10 @@ class SearchPage extends Component {
     // TODO: this list should be populated by database from Firebase
     this.state = {
       list: [
-        "Tokyo Ghoul",
-        "Haikyuu",
-        "Naruto",
-        "My Hero Academia"
+        "test",
+        "whoCares",
+        "naruto",
+        "haikyuu"
       ]
     }
   }
