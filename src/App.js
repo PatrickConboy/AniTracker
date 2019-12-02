@@ -1,7 +1,5 @@
 /* Author: Patrick Conboy
-
  * Date Created: 11/1/2019
-
  * Description: This file just pulls together the various main web page components
  * of our project.
  */
@@ -13,9 +11,9 @@ import './App.css'
 class App extends Component {
   // Constructor currently does nothing, but
   // might need later for login functionality.
-  constructor() {
-    super()
-  }
+  // constructor() {
+  //   super()
+  // }
 
   render() {
     return (
