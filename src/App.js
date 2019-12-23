@@ -5,23 +5,44 @@
  */
 
 import React, { Component } from 'react'
-import SearchPage from './SearchPage'
+import { Route, NavLink, Switch, BrowserRouter as Router } from 'react-router-dom'
+
 import './App.css'
+import SearchPage from './SearchPage'
 
 class App extends Component {
-  // Constructor currently does nothing, but
-  // might need later for login functionality.
-  // constructor() {
-  //   super()
-  // }
-
   render() {
     return (
-      <div className="App">
-        <SearchPage />
-      </div>
+      <Router>
+        <div className='App'>
+
+          <ul className='navLinks'>
+            <li>
+              <NavLink to='/'>Home</NavLink>
+            </li>
+            <li>
+              <NavLink to='/searchpage'>Search Page</NavLink>
+            </li>
+          </ul>
+
+          <Switch>
+            <Route path="/home">
+              <Home />
+            </Route>
+            <Route path="/searchpage">
+              <SearchPage />
+            </Route>
+          </Switch>
+
+          {/* <Route path='/searchpage' component={SearchPage} /> */}
+        </div >
+      </Router>
     )
   }
+}
+
+function Home() {
+  return <h2>Home</h2>;
 }
 
 export default App;
