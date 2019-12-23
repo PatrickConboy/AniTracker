@@ -1,3 +1,9 @@
+/* Author: Patrick Conboy
+ * Date Created: 10/20/2019
+ * Description: This file serves as the index for the AniTracker
+ * website.
+ */
+
 import React from 'react'
 import ReactDOM from 'react-dom'
 
