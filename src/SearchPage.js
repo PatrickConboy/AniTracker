@@ -13,7 +13,6 @@ class SearchPage extends Component {
     super(props)
 
     const db = firebase.firestore()
-<<<<<<< HEAD
 
     const animeList = []
     db.collection("anime").get().then((snapshot) => {
@@ -25,32 +24,13 @@ class SearchPage extends Component {
     })
 
     this.state = {animeList}
-=======
-    let animeList = db.collection("anime").get().then((snapshot) => {
-      console.log(snapshot.docs)
-    })
-
-    // TODO: this list should be populated by database from Firebase
-    this.state = {
-      list: [
-        "one piece",
-        "bleach",
-        "naruto",
-        "haikyuu"
-      ]
-    }
->>>>>>> dev
   }
 
   render() {
     return (
       <div className="searchList">
         <section className="section">
-<<<<<<< HEAD
           <FilteredSearchList items={this.state.animeList} />
-=======
-          <FilteredSearchList items={this.state.list} />
->>>>>>> dev
         </section>
       </div>
     )
