@@ -13,26 +13,25 @@ class SearchPage extends Component {
     super(props)
 
     const db = firebase.firestore()
-    let animeList = db.collection("anime").get().then((snapshot) => {
-      console.log(snapshot.docs)
+
+    const animeList = []
+    db.collection("anime").get().then((snapshot) => {
+      snapshot.docs.forEach(doc => {
+        let anime = doc.data()
+        let animeName = anime['name']
+        animeList.push(animeName)
+      })
     })
 
-    // TODO: this list should be populated by database from Firebase
-    this.state = {
-      list: [
-        "one piece",
-        "bleach",
-        "naruto",
-        "haikyuu"
-      ]
-    }
+    this.state = {animeList}
+    console.log(this.state)
   }
 
   render() {
     return (
       <div className="searchList">
         <section className="section">
-          <FilteredSearchList items={this.state.list} />
+          <FilteredSearchList items={this.state.animeList} />
         </section>
       </div>
     )
