@@ -24,7 +24,6 @@ class SearchPage extends Component {
     })
 
     this.state = {animeList}
-    console.log(this.state)
   }
 
   render() {

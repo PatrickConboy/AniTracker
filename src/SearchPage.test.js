@@ -10,6 +10,6 @@ it('renders without crashing', () => {
 
 it('My Test Case', () => {
   let searchList = new SearchPage("props")
-  let animeList = searchList.state["list"]
-  expect(animeList.length).toEqual(4)
+  let animeList = searchList.state["animeList"]
+  expect(animeList.length).toEqual(0)
 })
