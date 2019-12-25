@@ -1,26 +1,20 @@
-/* Created By: Patrick Conboy
- * Created On: November 1, 2019
- * Description: This is the main App file for the AniTracker website.
- * It simply calls Main and handles any basic constructor stuff.
-*/
+/* Author: Patrick Conboy
+ * Date Created: 11/1/2019
+ * Description: This file just pulls together the various main web page components
+ * of our project.
+ */
 
 import React, { Component } from 'react'
 
-import Main from './Main'
-import './App.css';
+import './App.css'
+import NavBar from './NavBar'
 
 class App extends Component {
-  // Constructor currently does nothing, but
-  // will need later for login functionality.
-  constructor() {
-    super()
-  }
-
   render() {
     return (
-      <div className="App">
-        <Main/>
-      </div>
+      <div className='App'>
+        <NavBar />
+      </div >
     )
   }
 }
