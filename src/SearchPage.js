@@ -11,19 +11,22 @@ import firebase from './components/firebase'
 class SearchPage extends Component {
   constructor(props) {
     super(props)
+    this.state = { animeList: [] }
+  }
 
-    const db = firebase.firestore()
-
-    const animeList = []
-    db.collection("anime").get().then((snapshot) => {
+  // componentDidMount will load things before the webpage is displayed
+  async componentDidMount() {
+    const db = await firebase.firestore()
+    const animeFromDb = []
+    await db.collection("anime").get().then((snapshot) => {
       snapshot.docs.forEach(doc => {
         let anime = doc.data()
         let animeName = anime['name']
-        animeList.push(animeName)
+        animeFromDb.push(animeName)
       })
     })
 
-    this.state = {animeList}
+    this.setState({ animeList: animeFromDb})
   }
 
   render() {
