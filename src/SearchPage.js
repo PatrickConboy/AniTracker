@@ -6,7 +6,7 @@
 
 import React, { Component } from 'react'
 import FilteredSearchList from './FilteredSearchList'
-import firebase from './components/Firebase/firebase'
+import firebase from './components/firebase'
 
 class SearchPage extends Component {
   constructor(props) {
