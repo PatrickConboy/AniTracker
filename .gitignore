@@ -61,4 +61,4 @@ typings/
 .next
 
 # Firebase folder
-src/components/Firebase/firebase.js
+src/components/firebase.js
