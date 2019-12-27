@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchPage Tests snapshot of search page hasn't changed 1`] = `
+<div
+  className="searchList"
+>
+  <section
+    className="section"
+  >
+    <div>
+      <input
+        className="input"
+        onChange={[Function]}
+        placeholder="Search..."
+        type="text"
+      />
+      <ul />
+    </div>
+  </section>
+</div>
+`;

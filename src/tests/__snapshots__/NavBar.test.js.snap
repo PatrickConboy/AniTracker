@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar Tests snapshot of nav bar hasn't changed 1`] = `
+<div
+  className="NavBar"
+>
+  <ul
+    id="navLinks"
+  >
+    <li>
+      <a
+        aria-current="page"
+        className="active"
+        href="/"
+        onClick={[Function]}
+        style={Object {}}
+      >
+        Home
+      </a>
+    </li>
+    <li>
+      <a
+        aria-current={null}
+        href="/searchpage"
+        onClick={[Function]}
+      >
+        Search Page
+      </a>
+    </li>
+  </ul>
+</div>
+`;
