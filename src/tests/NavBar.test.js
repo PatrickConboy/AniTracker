@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import renderer from 'react-test-renderer'
 
-import NavBar from './NavBar'
+import NavBar from '../NavBar'
 
 describe('NavBar Tests', () => {
   it('nav bar renders without crashing', () => {

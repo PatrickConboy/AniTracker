@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import renderer from 'react-test-renderer'
 
-import HomePage from './HomePage'
+import HomePage from '../HomePage'
 
 describe('HomePage Tests', () => {
   it('home page renders without crashing', () => {
