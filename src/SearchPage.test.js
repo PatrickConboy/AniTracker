@@ -19,8 +19,11 @@ describe('SearchPage Tests', () => {
   });
 
 
-  let searchList = new SearchPage("props")
-  let animeList = searchList.state["animeList"]
-  expect(animeList.length).toEqual(4)
-})
+  // For this test, probably need to render so mounting happens and then test the state.
+  // This will give time for the database query to run properly.
+  it('anime list length is correct', () => {
+    let searchList = new SearchPage("props")
+    let animeList = searchList.state["animeList"]
+    expect(animeList.length).toEqual(4)
+  })
 })
