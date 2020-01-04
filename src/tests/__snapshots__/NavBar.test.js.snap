@@ -9,11 +9,9 @@ exports[`NavBar Tests snapshot of nav bar hasn't changed 1`] = `
   >
     <li>
       <a
-        aria-current="page"
-        className="active"
-        href="/"
+        aria-current={null}
+        href="/home"
         onClick={[Function]}
-        style={Object {}}
       >
         Home
       </a>
@@ -25,6 +23,15 @@ exports[`NavBar Tests snapshot of nav bar hasn't changed 1`] = `
         onClick={[Function]}
       >
         Search Page
+      </a>
+    </li>
+    <li>
+      <a
+        aria-current={null}
+        href="/animelist"
+        onClick={[Function]}
+      >
+        Anime List
       </a>
     </li>
   </ul>

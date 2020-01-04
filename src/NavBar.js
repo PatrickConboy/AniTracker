@@ -10,6 +10,7 @@ import { Route, NavLink, Switch, BrowserRouter as Router } from 'react-router-do
 import './NavBar.css'
 import SearchPage from './SearchPage'
 import HomePage from './HomePage'
+import AnimeListPage from './AnimeListPage'
 
 class NavBar extends Component {
   render() {
@@ -19,10 +20,13 @@ class NavBar extends Component {
 
           <ul id='navLinks'>
             <li>
-              <NavLink to='/'>Home</NavLink>
+              <NavLink to='/home'>Home</NavLink>
             </li>
             <li>
               <NavLink to='/searchpage'>Search Page</NavLink>
+            </li>
+            <li>
+              <NavLink to='/animelist'>Anime List</NavLink>
             </li>
           </ul>
 
@@ -32,6 +36,9 @@ class NavBar extends Component {
             </Route>
             <Route path="/searchpage">
               <SearchPage />
+            </Route>
+            <Route path="/animelist">
+              <AnimeListPage />
             </Route>
           </Switch>
 
