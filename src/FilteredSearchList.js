@@ -14,7 +14,7 @@ class FilteredSearchList extends Component {
     this.state = {
       filtered: []
     }
-
+    
     this.handleChange = this.handleChange.bind(this)
   }
 
