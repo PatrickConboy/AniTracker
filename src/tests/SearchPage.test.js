@@ -20,8 +20,7 @@ describe('SearchPage Tests', () => {
   })
 
   test('snapshot of search page hasn\'t changed', () => {
-    const component = renderer.create(<SearchPage />)
-    let tree = component.toJSON()
+    const tree = renderer.create(<SearchPage />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })

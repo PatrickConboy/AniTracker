@@ -19,8 +19,7 @@ describe('HomePage Tests', () => {
   })
 
   test('snapshot of home page hasn\'t changed', () => {
-    const component = renderer.create(<HomePage />)
-    let tree = component.toJSON()
+    const tree = renderer.create(<HomePage />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })
