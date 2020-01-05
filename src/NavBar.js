@@ -31,15 +31,9 @@ class NavBar extends Component {
           </ul>
 
           <Switch>
-            <Route path="/home">
-              <HomePage />
-            </Route>
-            <Route path="/searchpage">
-              <SearchPage />
-            </Route>
-            <Route path="/animelist">
-              <AnimeListPage />
-            </Route>
+            <Route path="/home" component={HomePage}/>
+            <Route path="/searchpage" component={SearchPage}/>
+            <Route path="/animelist" component={AnimeListPage}/>
           </Switch>
 
         </div >
