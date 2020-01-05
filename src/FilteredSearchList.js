@@ -7,6 +7,9 @@
  */
 
 import React, { Component } from 'react'
+import { Route, BrowserRouter as Router } from 'react-router-dom'
+
+import AnimePage from './AnimePage'
 
 class FilteredSearchList extends Component {
   constructor(props) {
@@ -54,8 +57,20 @@ class FilteredSearchList extends Component {
     })
   }
 
-  handleRedirect() {
-    console.log("test")
+  handleRedirect(animeName) {
+    console.log(animeName)
+    // this.render() {
+    //   return (
+    //     <Router>
+    //       <div className='AnimePageLink'>
+    //         <Route path="/animepage" component={AnimePage}/>
+    //       </div >
+    //     </Router>
+    //     <div>
+    //       <AnimePage />
+    //     </div>
+    //   )
+    // }
   }
 
   render() {
@@ -63,7 +78,7 @@ class FilteredSearchList extends Component {
       <div>
         <input type="text" className="input" onChange={this.handleChange} placeholder="Search..." />
         <ul>
-          {this.state.filtered.map(item => (<li onClick={this.handleRedirect} key={item}>{item}</li>))}
+          {this.state.filtered.map(item => (<li onClick={this.handleRedirect.bind(this, item)} key={item}>{item}</li>))}
         </ul>
       </div>
     )
