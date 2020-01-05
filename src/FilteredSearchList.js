@@ -14,7 +14,7 @@ class FilteredSearchList extends Component {
     this.state = {
       filtered: []
     }
-    
+
     this.handleChange = this.handleChange.bind(this)
   }
 
@@ -36,7 +36,7 @@ class FilteredSearchList extends Component {
   handleChange(event) {
     let currentList = []
     let newList = []
-    
+
     if (event.target.value !== "") {
       currentList = this.props.items
       newList = currentList.filter(item => {
@@ -54,13 +54,19 @@ class FilteredSearchList extends Component {
     })
   }
 
+  handleRedirect() {
+    console.log("test")
+  }
+
   render() {
-    return (<div>
-      <input type="text" className="input" onChange={this.handleChange} placeholder="Search..." />
-      <ul>
-        {this.state.filtered.map(item => (<li key={item}>{item}</li>))}
-      </ul>
-    </div>)
+    return (
+      <div>
+        <input type="text" className="input" onChange={this.handleChange} placeholder="Search..." />
+        <ul>
+          {this.state.filtered.map(item => (<li onClick={this.handleRedirect} key={item}>{item}</li>))}
+        </ul>
+      </div>
+    )
   }
 }
 
