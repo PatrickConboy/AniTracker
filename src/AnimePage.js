@@ -14,6 +14,9 @@ class AnimePage extends Component {
     this.state = { animeName: "haikyuu" }
   }
 
+  // function here that queries database for all of the given animes info
+
+  // render takes all data from the query and displays it properly 
   render() {
     return (
       <h3>this.state.animeName</h3>
