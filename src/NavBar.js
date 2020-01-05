@@ -7,7 +7,7 @@
 import React, { Component } from 'react'
 import { Route, NavLink, Switch, BrowserRouter as Router } from 'react-router-dom'
 
-import './NavBar.css'
+import './css/NavBar.css'
 import SearchPage from './SearchPage'
 import HomePage from './HomePage'
 import AnimeListPage from './AnimeListPage'
