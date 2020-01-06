@@ -15,10 +15,14 @@ class FilteredSearchList extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      filtered: []
+      filtered: [],
+      isSearchList: true,
+      isAnimePage: false,
+      animeName: ""
     }
 
     this.handleChange = this.handleChange.bind(this)
+    this.showAnimePage = this.showAnimePage.bind(this)
   }
 
   // Passes in list of anime when intially rendered.
@@ -28,7 +32,7 @@ class FilteredSearchList extends Component {
     })
   }
 
-  // Passes in list of anime everytime it renders again.
+  // Passes in list of anime everytime it renders again. AKA, when user types in search bar.
   // NOTE: componentWillReceiveProps is an unsafe lifecycle in newest version of JS
   UNSAFE_componentWillReceiveProps(nextProps) {
     this.setState({
@@ -36,6 +40,7 @@ class FilteredSearchList extends Component {
     })
   }
 
+  // Handles change of list results after user types into search bar.
   handleChange(event) {
     let currentList = []
     let newList = []
@@ -57,29 +62,37 @@ class FilteredSearchList extends Component {
     })
   }
 
-  handleRedirect(animeName) {
-    console.log(animeName)
-    // this.render() {
-    //   return (
-    //     <Router>
-    //       <div className='AnimePageLink'>
-    //         <Route path="/animepage" component={AnimePage}/>
-    //       </div >
-    //     </Router>
-    //     <div>
-    //       <AnimePage />
-    //     </div>
-    //   )
-    // }
+  // Changes state of which component to show from search list to anime page.
+  showAnimePage(anime) {
+    this.setState({
+      isSearchList: false,
+      isAnimePage: true,
+      animeName: anime
+    })
+  }
+
+  animePage() {
+    return (
+      <div>
+        <AnimePage animeName={this.state.animeName} />
+      </div>
+    )
   }
 
   render() {
-    return (
+    var searchList = (
       <div>
         <input type="text" className="input" onChange={this.handleChange} placeholder="Search..." />
         <ul>
-          {this.state.filtered.map(item => (<li onClick={this.handleRedirect.bind(this, item)} key={item}>{item}</li>))}
+          {this.state.filtered.map(item => (<li onClick={this.showAnimePage.bind(this, item)} key={item}>{item}</li>))}
         </ul>
+      </div>
+    )
+
+    return (
+      <div>
+        { this.state.isSearchList ? searchList : null }
+        { this.state.isAnimePage ? this.animePage(): null }
       </div>
     )
   }

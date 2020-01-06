@@ -11,7 +11,7 @@ import React, { Component } from 'react'
 class AnimePage extends Component {
   constructor(props) {
     super(props)
-    this.state = { animeName: "haikyuu" }
+    this.state = { animeName: props.animeName }
   }
 
   // function here that queries database for all of the given animes info
@@ -19,7 +19,7 @@ class AnimePage extends Component {
   // render takes all data from the query and displays it properly 
   render() {
     return (
-      <h3>this.state.animeName</h3>
+      <h3>{this.state.animeName}</h3>
     )
   }
 }
