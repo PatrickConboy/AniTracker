@@ -19,8 +19,7 @@ describe('App Tests', () => {
   })
 
   test('snapshot of app hasn\'t changed', () => {
-    const component = renderer.create(<App />)
-    let tree = component.toJSON()
+    const tree = renderer.create(<App />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })

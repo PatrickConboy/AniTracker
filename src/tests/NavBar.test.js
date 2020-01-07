@@ -20,8 +20,7 @@ describe('NavBar Tests', () => {
   })
 
   test('snapshot of nav bar hasn\'t changed', () => {
-    const component = renderer.create(<NavBar />)
-    let tree = component.toJSON()
+    const tree = renderer.create(<NavBar />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })

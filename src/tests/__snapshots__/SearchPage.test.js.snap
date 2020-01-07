@@ -8,13 +8,15 @@ exports[`SearchPage Tests snapshot of search page hasn't changed 1`] = `
     className="section"
   >
     <div>
-      <input
-        className="input"
-        onChange={[Function]}
-        placeholder="Search..."
-        type="text"
-      />
-      <ul />
+      <div>
+        <input
+          className="input"
+          onChange={[Function]}
+          placeholder="Search..."
+          type="text"
+        />
+        <ul />
+      </div>
     </div>
   </section>
 </div>

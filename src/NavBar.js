@@ -7,9 +7,10 @@
 import React, { Component } from 'react'
 import { Route, NavLink, Switch, BrowserRouter as Router } from 'react-router-dom'
 
-import './NavBar.css'
+import './css/NavBar.css'
 import SearchPage from './SearchPage'
 import HomePage from './HomePage'
+import AnimeListPage from './AnimeListPage'
 
 class NavBar extends Component {
   render() {
@@ -19,20 +20,20 @@ class NavBar extends Component {
 
           <ul id='navLinks'>
             <li>
-              <NavLink to='/'>Home</NavLink>
+              <NavLink to='/home'>Home</NavLink>
             </li>
             <li>
               <NavLink to='/searchpage'>Search Page</NavLink>
             </li>
+            <li>
+              <NavLink to='/animelist'>Anime List</NavLink>
+            </li>
           </ul>
 
           <Switch>
-            <Route path="/home">
-              <HomePage />
-            </Route>
-            <Route path="/searchpage">
-              <SearchPage />
-            </Route>
+            <Route path="/home" component={HomePage}/>
+            <Route path="/searchpage" component={SearchPage}/>
+            <Route path="/animelist" component={AnimeListPage}/>
           </Switch>
 
         </div >
