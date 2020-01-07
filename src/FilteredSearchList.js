@@ -3,11 +3,11 @@
  * Description: This file creates a separate list from our original database
  * list of anime that we can filter without worrying about effecting the original.
  * It essentially just filters the list displayed on the website based on whatever
- * is typed in the input box.
+ * is typed in the input box. It also provides functionality to click an item in the 
+ * list and go to the individual page for that anime.
  */
 
 import React, { Component } from 'react'
-import { Route, BrowserRouter as Router } from 'react-router-dom'
 
 import AnimePage from './AnimePage'
 
@@ -32,7 +32,7 @@ class FilteredSearchList extends Component {
     })
   }
 
-  // Passes in list of anime everytime it renders again. AKA, when user types in search bar.
+  // Passes in list of anime everytime the page re-renders. AKA, when user types in search bar.
   // NOTE: componentWillReceiveProps is an unsafe lifecycle in newest version of JS
   UNSAFE_componentWillReceiveProps(nextProps) {
     this.setState({
@@ -40,7 +40,6 @@ class FilteredSearchList extends Component {
     })
   }
 
-  // Handles change of list results after user types into search bar.
   handleChange(event) {
     let currentList = []
     let newList = []
@@ -62,7 +61,6 @@ class FilteredSearchList extends Component {
     })
   }
 
-  // Changes state of which component to show from search list to anime page.
   showAnimePage(anime) {
     this.setState({
       isSearchList: false,
@@ -89,6 +87,8 @@ class FilteredSearchList extends Component {
       </div>
     )
 
+    // This is saying that if isSearchList is true, render that component. 
+    // Otherwise, render isAnimePage's component.
     return (
       <div>
         { this.state.isSearchList ? searchList : null }
