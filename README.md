@@ -4,7 +4,7 @@ This website serves as Patrick Conboy's senior project.
 
 This website currently only runs locally and isn't being hosted online.
 
-For full documentation, please visit the wiki for the project: https://github.com/PatrickConboy/AniTracker/wiki/Overview-of-AniTracker-Setup-and-Technologies-Used
+For full documentation, please visit the wiki for the project ---> [Click Me!](https://github.com/PatrickConboy/AniTracker/wiki)
 
 # Contributors
 Main developer was Patrick Conboy.
