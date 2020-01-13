@@ -82,7 +82,7 @@ class FilteredSearchList extends Component {
       <div>
         <input type="text" className="input" onChange={this.handleChange} placeholder="Search..." />
         <ul>
-          {this.state.filtered.map(item => (<li onClick={this.showAnimePage.bind(this, item)} key={item}>{item}</li>))}
+          {this.state.filtered.map(item => (<li className={item} onClick={this.showAnimePage.bind(this, item)} key={item}>{item}</li>))}
         </ul>
       </div>
     )
