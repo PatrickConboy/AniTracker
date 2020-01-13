@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AnimePage Tests snapshot of anime page hasn't changed 1`] = `<h3 />`;
