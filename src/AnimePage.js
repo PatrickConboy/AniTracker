@@ -55,8 +55,7 @@ class AnimePage extends Component {
       })
     })
   }
-
-  // render takes all data from the query and displays it properly 
+ 
   render() {
     return (
       <div className="animeData">
