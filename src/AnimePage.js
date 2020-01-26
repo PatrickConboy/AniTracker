@@ -54,6 +54,19 @@ class AnimePage extends Component {
         animeRating: animeData['rating'],
       })
     })
+    .catch(function(error) {
+      console.error("Error reading document: ", error)
+    })
+  }
+
+  async handleAddAnime() {
+    const db = await firebase.firestore()
+    await db.collection("personalList").doc(this.state.animeName).set({
+      name: this.state.animeName
+    })
+    .catch(function(error) {
+      console.error("Error writing document: ", error)
+    })
   }
 
   render() {
@@ -61,7 +74,7 @@ class AnimePage extends Component {
       <div className="animeInfo">
         <div className="nameSpace">
           <h2>{this.state.animeName}</h2>
-          <button type="button" className="btn">Add to list</button>
+          <button type="button" className="addToListBtn" onClick={this.handleAddAnime.bind(this, this.state.animeName)}>Add to list</button>
         </div>
 
         <div className="animeBlurbs">

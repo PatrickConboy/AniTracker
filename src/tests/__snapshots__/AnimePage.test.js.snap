@@ -9,7 +9,8 @@ exports[`AnimePage Tests snapshot of anime page hasn't changed 1`] = `
   >
     <h2 />
     <button
-      className="btn"
+      className="addToListBtn"
+      onClick={[Function]}
       type="button"
     >
       Add to list
