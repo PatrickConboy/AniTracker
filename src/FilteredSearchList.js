@@ -10,6 +10,7 @@
 import React, { Component } from 'react'
 
 import AnimePage from './AnimePage'
+import './css/FilteredSearchList.css'
 
 class FilteredSearchList extends Component {
   constructor(props) {
