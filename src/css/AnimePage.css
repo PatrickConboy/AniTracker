@@ -1,4 +1,4 @@
-.nameSpace {
-  display: flex;
-  flex-direction: row;
+.addToListBtn:hover {
+  cursor: pointer;
+}
 }
