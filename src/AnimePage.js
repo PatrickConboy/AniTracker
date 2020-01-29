@@ -69,12 +69,20 @@ class AnimePage extends Component {
     })
   }
 
+  async handleRemoveAnime() {
+    const db = await firebase.firestore()
+    await db.collection("personalList").doc(this.state.animeName).delete()
+    .catch(function(error) {
+      console.error("Error deleting document: ", error)
+    })
+  }
+
   render() {
     return (
       <div className="animeInfo">
         <div className="nameSpace">
           <h2>{this.state.animeName}</h2>
-          <button type="button" className="addToListBtn" onClick={this.handleAddAnime.bind(this, this.state.animeName)}>Add to list</button>
+          <button type="button" className="addToListBtn" onClick={this.handleAddAnime.bind(this, this.state.animeName)}>Add To List</button>
           <button type="button" className="removeFromListBtn" onClick={this.handleRemoveAnime.bind(this, this.state.animeName)}>Remove From List</button>
         </div>
 
