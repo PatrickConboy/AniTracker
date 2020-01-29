@@ -2,15 +2,89 @@
 
 exports[`AnimePage Tests snapshot of anime page hasn't changed 1`] = `
 <div
-  className="animeData"
+  className="animeInfo"
 >
-  <h2 />
-  <h3>
-    Episodes: 
-  </h3>
-  <h3>
-    Genre: 
-    
-  </h3>
+  <div
+    className="nameSpace"
+  >
+    <h2 />
+    <button
+      className="addToListBtn"
+      onClick={[Function]}
+      type="button"
+    >
+      Add To List
+    </button>
+    <button
+      className="removeFromListBtn"
+      onClick={[Function]}
+      type="button"
+    >
+      Remove From List
+    </button>
+  </div>
+  <div
+    className="animeBlurbs"
+  >
+    <h3>
+      Synopsis: 
+      
+    </h3>
+    <h3>
+      Background: 
+      
+    </h3>
+  </div>
+  <div
+    className="animeDataColumn"
+  >
+    <h3>
+      Type: 
+      
+    </h3>
+    <h3>
+      Episodes: 
+    </h3>
+    <h3>
+      Status: 
+      
+    </h3>
+    <h3>
+      Aired: 
+      
+    </h3>
+    <h3>
+      Premiered: 
+      
+    </h3>
+    <h3>
+      Producers: 
+      
+    </h3>
+    <h3>
+      Licensors: 
+      
+    </h3>
+    <h3>
+      Studios: 
+      
+    </h3>
+    <h3>
+      Source: 
+      
+    </h3>
+    <h3>
+      Genres: 
+      
+    </h3>
+    <h3>
+      Duration: 
+      
+    </h3>
+    <h3>
+      Rating: 
+      
+    </h3>
+  </div>
 </div>
 `;

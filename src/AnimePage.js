@@ -9,37 +9,104 @@
 import React, { Component } from 'react'
 import firebase from './components/firebase'
 
+import './css/AnimePage.css'
+
 class AnimePage extends Component {
   constructor(props) {
     super(props)
     this.state = {
       animeName: props.animeName,
+      animeSynopsis: "",
+      animeBackground: "",
+      typeOfAnime: "",
       numberOfEpisodes: null,
-      animeGenre: ""
+      animeStatus: "",
+      dateAired: "",
+      seasonPremiered: "",
+      animeProducers: "",
+      animeLicensors: "",
+      animeStudios: "",
+      sourceMaterial: "",
+      animeGenres: "",
+      animeDuration: "",
+      animeRating: ""
     }
   }
 
   // function here that queries database for all of the given animes info
   async componentDidMount() {
     const db = await firebase.firestore()
-    await db.collection("anime").doc("One Piece").get().then((snapshot) => {
+    await db.collection("anime").doc(this.state.animeName).get().then((snapshot) => {
       let animeData = snapshot.data()
-      let animeEpisodes = animeData['episodes']
-      let animeGenre = animeData['genre']
+
       this.setState({
-        numberOfEpisodes: animeEpisodes,
-        animeGenre: animeGenre
+        animeSynopsis: animeData['synopsis'],
+        animeBackground: animeData['background'],
+        typeOfAnime: animeData['type'],
+        numberOfEpisodes: animeData['episodes'],
+        animeStatus: animeData['status'],
+        dateAired: animeData['aired'],
+        seasonPremiered: animeData['premiered'],
+        animeProducers: animeData['producers'],
+        animeLicensors: animeData['licensors'],
+        animeStudios: animeData['studios'],
+        sourceMaterial: animeData['source'],
+        animeGenres: animeData['genres'],
+        animeDuration: animeData['duration'],
+        animeRating: animeData['rating'],
       })
+    })
+    .catch(function(error) {
+      console.error("Error reading document: ", error)
     })
   }
 
-  // render takes all data from the query and displays it properly 
+  async handleAddAnime() {
+    const db = await firebase.firestore()
+    await db.collection("personalList").doc(this.state.animeName).set({
+      name: this.state.animeName
+    })
+    .catch(function(error) {
+      console.error("Error writing document: ", error)
+    })
+  }
+
+  async handleRemoveAnime() {
+    const db = await firebase.firestore()
+    await db.collection("personalList").doc(this.state.animeName).delete()
+    .catch(function(error) {
+      console.error("Error deleting document: ", error)
+    })
+  }
+
   render() {
     return (
-      <div className="animeData">
-        <h2>{this.state.animeName}</h2>
-        <h3>Episodes: {this.state.numberOfEpisodes}</h3>
-        <h3>Genre: {this.state.animeGenre}</h3>
+      <div className="animeInfo">
+        <div className="nameSpace">
+          <h2>{this.state.animeName}</h2>
+          <button type="button" className="addToListBtn" onClick={this.handleAddAnime.bind(this, this.state.animeName)}>Add To List</button>
+          <button type="button" className="removeFromListBtn" onClick={this.handleRemoveAnime.bind(this, this.state.animeName)}>Remove From List</button>
+        </div>
+
+        <div className="animeBlurbs">
+          <h3>Synopsis: {this.state.animeSynopsis}</h3>
+          <h3>Background: {this.state.animeBackground}</h3>
+        </div>
+
+        <div className="animeDataColumn">
+          <h3>Type: {this.state.typeOfAnime}</h3>
+          <h3>Episodes: {this.state.numberOfEpisodes}</h3>
+          <h3>Status: {this.state.animeStatus}</h3>
+          <h3>Aired: {this.state.dateAired}</h3>
+          <h3>Premiered: {this.state.seasonPremiered}</h3>
+          <h3>Producers: {this.state.animeProducers}</h3>
+          <h3>Licensors: {this.state.animeLicensors}</h3>
+          <h3>Studios: {this.state.animeStudios}</h3>
+          <h3>Source: {this.state.sourceMaterial}</h3>
+          <h3>Genres: {this.state.animeGenres}</h3>
+          <h3>Duration: {this.state.animeDuration}</h3>
+          <h3>Rating: {this.state.animeRating}</h3>
+        </div>
       </div>
     )
   }

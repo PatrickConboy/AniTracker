@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import renderer from 'react-test-renderer'
-import { shallow, mount, render } from '../enzyme'
+import { render } from '../enzyme'
 
 import FilteredSearchList from '../FilteredSearchList'
 
