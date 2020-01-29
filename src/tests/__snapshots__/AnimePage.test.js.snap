@@ -13,7 +13,14 @@ exports[`AnimePage Tests snapshot of anime page hasn't changed 1`] = `
       onClick={[Function]}
       type="button"
     >
-      Add to list
+      Add To List
+    </button>
+    <button
+      className="removeFromListBtn"
+      onClick={[Function]}
+      type="button"
+    >
+      Remove From List
     </button>
   </div>
   <div

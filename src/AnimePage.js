@@ -75,6 +75,7 @@ class AnimePage extends Component {
         <div className="nameSpace">
           <h2>{this.state.animeName}</h2>
           <button type="button" className="addToListBtn" onClick={this.handleAddAnime.bind(this, this.state.animeName)}>Add to list</button>
+          <button type="button" className="removeFromListBtn" onClick={this.handleRemoveAnime.bind(this, this.state.animeName)}>Remove From List</button>
         </div>
 
         <div className="animeBlurbs">
