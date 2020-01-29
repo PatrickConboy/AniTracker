@@ -9,6 +9,8 @@
 import React, { Component } from 'react'
 import firebase from './components/firebase'
 
+import './css/AnimePage.css'
+
 class AnimePage extends Component {
   constructor(props) {
     super(props)
