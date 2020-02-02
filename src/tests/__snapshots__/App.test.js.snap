@@ -12,9 +12,11 @@ exports[`App Tests snapshot of app hasn't changed 1`] = `
     >
       <li>
         <a
-          aria-current={null}
-          href="/home"
+          aria-current="page"
+          className="active"
+          href="/"
           onClick={[Function]}
+          style={Object {}}
         >
           Home
         </a>
@@ -22,7 +24,7 @@ exports[`App Tests snapshot of app hasn't changed 1`] = `
       <li>
         <a
           aria-current={null}
-          href="/searchpage"
+          href="/search-page"
           onClick={[Function]}
         >
           Search Page
@@ -31,13 +33,20 @@ exports[`App Tests snapshot of app hasn't changed 1`] = `
       <li>
         <a
           aria-current={null}
-          href="/animelist"
+          href="/anime-list"
           onClick={[Function]}
         >
           Anime List
         </a>
       </li>
     </ul>
+    <div
+      className="HomePage"
+    >
+      <h3>
+        Welcome to AniTracker!
+      </h3>
+    </div>
   </div>
 </div>
 `;
