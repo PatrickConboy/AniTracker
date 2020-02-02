@@ -7,9 +7,9 @@
 import React, { Component } from 'react'
 import firebase from './components/firebase'
 
-import AnimePage from './AnimePage'
+import Anime from './Anime'
 
-class AnimeListPage extends Component {
+class AnimeList extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -47,29 +47,31 @@ class AnimeListPage extends Component {
   animePage() {
     return (
       <div>
-        <AnimePage animeName={this.state.animeName} />
+        <Anime animeName={this.state.animeName} />
       </div>
     )
   }
 
-  render() {
-    var personalListPage = (
+  personalListPage() {
+    return (
       <div>
         <ul>
           {this.state.personalList.map(item => (<li className={item} onClick={this.showAnimePage.bind(this, item)} key={item}>{item}</li>))}
         </ul>
       </div>
     )
+  }
 
+  render() {
     // This is saying that if isPersonalList is true, render that component. 
     // Otherwise, render isAnimePage's component.
     return (
       <div>
-        { this.state.isPersonalList ? personalListPage : null }
-        { this.state.isAnimePage ? this.animePage(): null }
+        {this.state.isPersonalList ? this.personalListPage() : null}
+        {this.state.isAnimePage ? this.animePage() : null}
       </div>
     )
   }
 }
 
-export default AnimeListPage;
+export default AnimeList;

@@ -3,23 +3,23 @@ import ReactDOM from 'react-dom'
 import renderer from 'react-test-renderer'
 import { shallow } from '../enzyme'
 
-import HomePage from '../HomePage'
+import Home from '../Home'
 
-describe('HomePage Tests', () => {
+describe('Home Tests', () => {
   test('home page renders without crashing', () => {
     const div = document.createElement('div')
-    ReactDOM.render(<HomePage />, div)
+    ReactDOM.render(<Home />, div)
     ReactDOM.unmountComponentAtNode(div)
   })
 
   test('home page renders correctly', () => {
-    const wrapper = shallow(<HomePage />)
+    const wrapper = shallow(<Home />)
 
-    expect(wrapper.find('#HomePage')).toBeDefined()
+    expect(wrapper.find('#Home')).toBeDefined()
   })
 
   test('snapshot of home page hasn\'t changed', () => {
-    const tree = renderer.create(<HomePage />).toJSON()
+    const tree = renderer.create(<Home />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })

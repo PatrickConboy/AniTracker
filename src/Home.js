@@ -6,7 +6,7 @@
 
 import React, { Component } from 'react'
 
-class HomePage extends Component {
+class Home extends Component {
   render() {
     return (
       <div className="HomePage">
@@ -16,4 +16,4 @@ class HomePage extends Component {
   }
 }
 
-export default HomePage;
+export default Home;

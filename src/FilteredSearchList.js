@@ -9,7 +9,7 @@
 
 import React, { Component } from 'react'
 
-import AnimePage from './AnimePage'
+import Anime from './Anime'
 import './css/FilteredSearchList.css'
 
 class FilteredSearchList extends Component {
@@ -42,23 +42,23 @@ class FilteredSearchList extends Component {
   }
 
   handleChange(event) {
-    let currentList = []
-    let newList = []
+    let currentAnimeList = []
+    let newAnimeList = []
 
     if (event.target.value !== "") {
-      currentList = this.props.items
-      newList = currentList.filter(item => {
-        const lc = item.toLowerCase()
+      currentAnimeList = this.props.items
+      newAnimeList = currentAnimeList.filter(anime => {
+        const lowercase = anime.toLowerCase()
         const filter = event.target.value.toLowerCase()
-        return lc.includes(filter)
+        return lowercase.includes(filter)
       })
     }
     else {
-      newList = this.props.items;
+      newAnimeList = this.props.items;
     }
 
     this.setState({
-      filtered: newList
+      filtered: newAnimeList
     })
   }
 
@@ -73,13 +73,13 @@ class FilteredSearchList extends Component {
   animePage() {
     return (
       <div>
-        <AnimePage animeName={this.state.animeName} />
+        <Anime animeName={this.state.animeName} />
       </div>
     )
   }
 
-  render() {
-    var searchList = (
+  searchList() {
+    return (
       <div>
         <input type="text" className="input" onChange={this.handleChange} placeholder="Search..." />
         <ul>
@@ -87,13 +87,15 @@ class FilteredSearchList extends Component {
         </ul>
       </div>
     )
+  }
 
+  render() {
     // This is saying that if isSearchList is true, render that component. 
     // Otherwise, render isAnimePage's component.
     return (
       <div>
-        { this.state.isSearchList ? searchList : null }
-        { this.state.isAnimePage ? this.animePage(): null }
+        {this.state.isSearchList ? this.searchList() : null}
+        {this.state.isAnimePage ? this.animePage() : null}
       </div>
     )
   }

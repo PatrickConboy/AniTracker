@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SearchPage Tests snapshot of search page hasn't changed 1`] = `
+exports[`Search Tests snapshot of search page hasn't changed 1`] = `
 <div
   className="searchList"
 >

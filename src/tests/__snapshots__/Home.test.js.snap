@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`HomePage Tests snapshot of home page hasn't changed 1`] = `
+exports[`Home Tests snapshot of home page hasn't changed 1`] = `
 <div
   className="HomePage"
 >
