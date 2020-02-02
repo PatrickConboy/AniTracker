@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AnimeListPage Tests snapshot of anime list page hasn't changed 1`] = `
+exports[`AnimeList Tests snapshot of anime list page hasn't changed 1`] = `
 <div>
   <div>
     <ul />

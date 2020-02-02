@@ -5,11 +5,12 @@
  */
 
 import React, { Component } from 'react'
+import { Route, BrowserRouter as Router } from 'react-router-dom'
 import firebase from './components/firebase'
 
 import AnimePage from './AnimePage'
 
-class AnimeListPage extends Component {
+class AnimeList extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -52,24 +53,26 @@ class AnimeListPage extends Component {
     )
   }
 
-  render() {
-    var personalListPage = (
+  personalListPage() {
+    return (
       <div>
         <ul>
           {this.state.personalList.map(item => (<li className={item} onClick={this.showAnimePage.bind(this, item)} key={item}>{item}</li>))}
         </ul>
       </div>
     )
+  }
 
+  render() {
     // This is saying that if isPersonalList is true, render that component. 
     // Otherwise, render isAnimePage's component.
     return (
       <div>
-        { this.state.isPersonalList ? personalListPage : null }
-        { this.state.isAnimePage ? this.animePage(): null }
+        {this.state.isPersonalList ? this.personalListPage() : null}
+        {this.state.isAnimePage ? this.animePage() : null}
       </div>
     )
   }
 }
 
-export default AnimeListPage;
+export default AnimeList;
