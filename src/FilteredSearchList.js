@@ -42,23 +42,23 @@ class FilteredSearchList extends Component {
   }
 
   handleChange(event) {
-    let currentList = []
-    let newList = []
+    let currentAnimeList = []
+    let newAnimeList = []
 
     if (event.target.value !== "") {
-      currentList = this.props.items
-      newList = currentList.filter(item => {
-        const lc = item.toLowerCase()
+      currentAnimeList = this.props.items
+      newAnimeList = currentAnimeList.filter(anime => {
+        const lowercase = anime.toLowerCase()
         const filter = event.target.value.toLowerCase()
-        return lc.includes(filter)
+        return lowercase.includes(filter)
       })
     }
     else {
-      newList = this.props.items;
+      newAnimeList = this.props.items;
     }
 
     this.setState({
-      filtered: newList
+      filtered: newAnimeList
     })
   }
 
