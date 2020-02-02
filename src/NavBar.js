@@ -20,7 +20,7 @@ class NavBar extends Component {
 
           <ul id='navLinks'>
             <li>
-              <NavLink to='/home'>Home</NavLink>
+              <NavLink to='/'>Home</NavLink>
             </li>
             <li>
               <NavLink to='/search-page'>Search Page</NavLink>
@@ -31,7 +31,7 @@ class NavBar extends Component {
           </ul>
 
           <Switch>
-            <Route path="/home" component={HomePage}/>
+            <Route exact path="/" component={HomePage}/>
             <Route path="/search-page" component={SearchPage}/>
             <Route path="/anime-list" component={AnimeListPage}/>
           </Switch>
