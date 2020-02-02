@@ -78,8 +78,8 @@ class FilteredSearchList extends Component {
     )
   }
 
-  render() {
-    var searchList = (
+  searchList() {
+    return (
       <div>
         <input type="text" className="input" onChange={this.handleChange} placeholder="Search..." />
         <ul>
@@ -87,13 +87,15 @@ class FilteredSearchList extends Component {
         </ul>
       </div>
     )
+  }
 
+  render() {
     // This is saying that if isSearchList is true, render that component. 
     // Otherwise, render isAnimePage's component.
     return (
       <div>
-        { this.state.isSearchList ? searchList : null }
-        { this.state.isAnimePage ? this.animePage(): null }
+        {this.state.isSearchList ? this.searchList() : null}
+        {this.state.isAnimePage ? this.animePage() : null}
       </div>
     )
   }
