@@ -8,7 +8,7 @@ import React, { Component } from 'react'
 import FilteredSearchList from './FilteredSearchList'
 import firebase from './components/firebase'
 
-class SearchPage extends Component {
+class Search extends Component {
   constructor(props) {
     super(props)
     this.state = { animeList: [] }
@@ -40,4 +40,4 @@ class SearchPage extends Component {
   }
 }
 
-export default SearchPage
+export default Search
