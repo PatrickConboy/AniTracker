@@ -23,17 +23,17 @@ class NavBar extends Component {
               <NavLink to='/home'>Home</NavLink>
             </li>
             <li>
-              <NavLink to='/searchpage'>Search Page</NavLink>
+              <NavLink to='/search-page'>Search Page</NavLink>
             </li>
             <li>
-              <NavLink to='/animelist'>Anime List</NavLink>
+              <NavLink to='/anime-list'>Anime List</NavLink>
             </li>
           </ul>
 
           <Switch>
             <Route path="/home" component={HomePage}/>
-            <Route path="/searchpage" component={SearchPage}/>
-            <Route path="/animelist" component={AnimeListPage}/>
+            <Route path="/search-page" component={SearchPage}/>
+            <Route path="/anime-list" component={AnimeListPage}/>
           </Switch>
 
         </div >
