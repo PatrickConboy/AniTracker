@@ -3,23 +3,23 @@ import ReactDOM from 'react-dom'
 import renderer from 'react-test-renderer'
 import { shallow } from '../enzyme'
 
-import AnimePage from '../AnimePage'
+import Anime from '../Anime'
 
-describe('AnimePage Tests', () => {
+describe('Anime Tests', () => {
   test('anime page renders without crashing', () => {
     const div = document.createElement('div')
-    ReactDOM.render(<AnimePage />, div)
+    ReactDOM.render(<Anime />, div)
     ReactDOM.unmountComponentAtNode(div)
   })
 
   test('anime page renders correctly', () => {
-    const wrapper = shallow(<AnimePage />)
+    const wrapper = shallow(<Anime />)
 
-    expect(wrapper.find('#AnimePage')).toBeDefined()
+    expect(wrapper.find('#Anime')).toBeDefined()
   })
 
   test('snapshot of anime page hasn\'t changed', () => {
-    const tree = renderer.create(<AnimePage />).toJSON()
+    const tree = renderer.create(<Anime />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })

@@ -5,10 +5,9 @@
  */
 
 import React, { Component } from 'react'
-import { Route, BrowserRouter as Router } from 'react-router-dom'
 import firebase from './components/firebase'
 
-import AnimePage from './AnimePage'
+import Anime from './Anime'
 
 class AnimeList extends Component {
   constructor(props) {
@@ -48,7 +47,7 @@ class AnimeList extends Component {
   animePage() {
     return (
       <div>
-        <AnimePage animeName={this.state.animeName} />
+        <Anime animeName={this.state.animeName} />
       </div>
     )
   }

@@ -9,7 +9,7 @@
 
 import React, { Component } from 'react'
 
-import AnimePage from './AnimePage'
+import Anime from './Anime'
 import './css/FilteredSearchList.css'
 
 class FilteredSearchList extends Component {
@@ -73,7 +73,7 @@ class FilteredSearchList extends Component {
   animePage() {
     return (
       <div>
-        <AnimePage animeName={this.state.animeName} />
+        <Anime animeName={this.state.animeName} />
       </div>
     )
   }

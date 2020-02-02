@@ -9,9 +9,9 @@
 import React, { Component } from 'react'
 import firebase from './components/firebase'
 
-import './css/AnimePage.css'
+import './css/Anime.css'
 
-class AnimePage extends Component {
+class Anime extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -112,4 +112,4 @@ class AnimePage extends Component {
   }
 }
 
-export default AnimePage;
+export default Anime;
