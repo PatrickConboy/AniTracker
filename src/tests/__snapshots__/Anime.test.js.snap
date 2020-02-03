@@ -10,6 +10,7 @@ exports[`Anime Tests snapshot of anime page hasn't changed 1`] = `
     <h2 />
     <button
       className="addToListBtn"
+      id="addButton"
       onClick={[Function]}
       type="button"
     >
@@ -17,6 +18,7 @@ exports[`Anime Tests snapshot of anime page hasn't changed 1`] = `
     </button>
     <button
       className="removeFromListBtn"
+      id="removeButton"
       onClick={[Function]}
       type="button"
     >

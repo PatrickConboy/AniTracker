@@ -32,6 +32,9 @@ class AnimeList extends Component {
         personalListFromDb.push(animeName)
       })
     })
+    .catch(function(error) {
+      console.error("Error reading document: ", error)
+    })
 
     this.setState({ personalList: personalListFromDb })
   }
