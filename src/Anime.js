@@ -84,8 +84,8 @@ class Anime extends Component {
       <div className="animeInfo">
         <div className="nameSpace">
           <h2>{this.state.animeName}</h2>
-          <button type="button" className="addToListBtn" onClick={this.handleAddAnime.bind(this, this.state.animeName)}>Add To List</button>
-          <button type="button" className="removeFromListBtn" onClick={this.handleRemoveAnime.bind(this, this.state.animeName)}>Remove From List</button>
+          <button type="button" className="addToListBtn" id="addButton" onClick={this.handleAddAnime.bind(this, this.state.animeName)}>Add To List</button>
+          <button type="button" className="removeFromListBtn" id="removeButton" onClick={this.handleRemoveAnime.bind(this, this.state.animeName)}>Remove From List</button>
         </div>
 
         <div className="animeBlurbs">
