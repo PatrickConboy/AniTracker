@@ -1,6 +1,6 @@
 # AniTracker
 
-This website serves as Patrick Conboy's senior project. 
+This website serves as Patrick Conboy's senior project. The project's goal was to implement a website similar to MyAnimeList that fixed a lot of the issues MAL had.
 
 This website currently only runs locally and isn't being hosted online. 
 Details on how to run the website locally in the wiki mentioned below.
