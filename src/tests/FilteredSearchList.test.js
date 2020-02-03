@@ -17,12 +17,5 @@ describe('FilteredSearchList Tests', () => {
     const anime = ['Naruto', 'Bleach', 'Haikyuu!', 'Toradora']   
     const wrapper = render(<FilteredSearchList props={anime} />)
     expect(wrapper.find('.Naruto')).toBeDefined()
-    // wrapper.find('.Naruto').onClick()
   })
-
-  // test('snapshot of filtered search list hasn\'t changed', () => {
-  //   const anime = { animeList: ['Naruto', 'Bleach', 'Haikyuu!', 'Toradora'] }
-  //   const tree = renderer.create(<FilteredSearchList props={anime} />).toJSON()
-  //   expect(tree).toMatchSnapshot()
-  // })
 })
