@@ -2,7 +2,8 @@
 
 This website serves as Patrick Conboy's senior project. 
 
-This website currently only runs locally and isn't being hosted online.
+This website currently only runs locally and isn't being hosted online. 
+Details on how to run the website locally in the wiki mentioned below.
 
 For full documentation, please visit the wiki for the project ---> [Click Me!](https://github.com/PatrickConboy/AniTracker/wiki)
 
